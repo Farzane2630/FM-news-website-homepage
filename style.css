@@ -1,5 +1,17 @@
 /* Variables */
 
+:root {
+  --Primary-Orange: hsl(35, 77%, 62%);
+  --Primary-Red: hsl(5, 85%, 63%);
+
+  /* Neutral */
+
+  --Off-White: hsl(36, 100%, 99%);
+  --Grayish-Blue: hsl(233, 8%, 79%);
+  --Dark-Blue: hsl(236, 13%, 42%);
+  --Very-Dark-Blue: hsl(240, 100%, 5%);
+}
+
 @font-face {
   font-family: Inter;
   src: url("/assets/fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
@@ -7,15 +19,144 @@
 
 /* Reset */
 *,
-*::after,
-*::before {
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
 /* Layout */
 body {
+  position: relative;
   min-height: 100vh;
   font-family: Inter, "sans-serif";
+  padding: 1.5em;
+  display: grid;
+  align-content: center;
+  gap: 2em;
+
+  @media (min-width: 30em) {
+    max-width: 45em;
+  }
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 3em;
+  width: 4em;
+}
+
+
+/* Navigation */
+.menu-icon-btn {
+  width: 4em;
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: 30em) {
+    display: none;
+  }
+}
+
+.main-navigation-menu {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1em;
+  list-style: none;
+
+  a {
+    text-decoration: none;
+    color: var(--Very-Dark-Blue);
+  }
+
+  a:hover,
+  a[aria-current="page"] {
+    color: var(--Primary-Red);
+  }
+
+  @media (max-width: 30em) {
+    display: none;
+  }
+}
+
+.mobile-view-menu {
+  display: none;
+}
+
+.mobile-view-menu.show {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  background-color: white;
+  align-items: flex-end;
+}
+
+.mobile-main-navigation-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  row-gap: 2em;
+  padding: 2em;
+  width: 60vw;
+  height: 100dvh;
+
+  list-style: none;
+
+  a {
+    text-decoration: none;
+    color: var(--Very-Dark-Blue);
+  }
+}
+
+.close-menu-btn {
+  display: none;
+}
+
+.close-menu-btn.show {
+  display: block;
+  width: 2em;
+  height: 2em;
+}
+
+
+/* Main Content */
+.main {
+  display: grid;
+}
+
+.top-section {
+  @media (min-width: 30em) {
+    display: flex;
+  }
+}
+
+.story-of-the-day {
+  display: grid;
+  gap: 1em;
+  text-align: start;
+}
+
+.trendings-section {
+  @media (min-width: 30em) {
+    display: flex;
+  }
+}
+
+img {
+  width: 100%;
 }

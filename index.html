@@ -21,116 +21,137 @@
     <title>News | Homepage</title>
   </head>
   <body>
-      <header>
-        <img class="logo" src="./assets/images/logo.svg" alt="Logo" />
+    <!-- Menu layout in Mobile devices -->
+    <div class="mobile-view-menu">
+      <button class="close-menu-btn">
+        <img src="./assets/images/icon-menu-close.svg" alt="close menu icon" />
+      </button>
+      <nav aria-label="Primary">
+        <ul id="mobile-main-navigation" class="mobile-main-navigation-menu">
+          <li><a href="#" aria-current="page">Home</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">Categories</a></li>
+        </ul>
+      </nav>
+    </div>
 
-        <nav aria-label="Primary">
-          <ul class="main-navigation">
-            <li><a href="#" aria-current="page">Home</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Popular</a></li>
-            <li><a href="#">Trending</a></li>
-            <li><a href="#">Categories</a></li>
-          </ul>
-        </nav>
-      </header>
+    <header>
+      <img class="logo" src="./assets/images/logo.svg" alt="Logo" />
 
-      <main class="main-wrapper">
-        <div class="top-section" aria-label="top-section">
-          <section
-            class="story-of-the-day"
-            aria-labelledby="story-of-the-day-title"
-            aria-describedby="story-of-the-day-description"
-          >
-            <picture>
-              <source
-                width="100%"
-                media="(min-width: 30em)"
-                srcset="./assets/images/image-web-3-desktop.jpg"
-              />
-              <img
-                width="100%"
-                src="./assets/images/image-web-3-mobile.jpg"
-                alt="Web3"
-              />
-            </picture>
-            <h1 id="story-of-the-day-title">The Bright Future of Web 3.0?</h1>
-            <p id="story-of-the-day-description">
-              We dive into the next evolution of the web that claims to put the
-              power of the platforms back into the hands of the people. But is
-              it really fulfilling its promise?
-            </p>
-            <button type="button" class="read-more-btn">Read more</button>
-          </section>
+      <nav aria-label="Primary">
+        <ul id="main-navigation" class="main-navigation-menu">
+          <li><a href="#" aria-current="page">Home</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">Categories</a></li>
+        </ul>
+      </nav>
 
-          <section class="news-section" aria-labelledby="news">
-            <h2 id="news">News</h2>
-            <div class="news-cards-wrapper">
-              <div class="news-card">
-                <h3 class="news-card-title">Hydrogen VS Electric Cars</h3>
-                <p class="news-card-description">
-                  Will hydrogen-fueled cars ever catch up to EVs?
-                </p>
-              </div>
-              <div class="news-card">
-                <h3 class="news-card-title">The Downsides of AI Artistry</h3>
-                <p class="news-card-description">
-                  What are the possible adverse effects of on-demand AI image
-                  generation?
-                </p>
-              </div>
-              <div class="news-card">
-                <h3 class="news-card-title">Is VC Funding Drying Up?</h3>
-                <p class="news-card-description">
-                  Private funding by VC firms is down 50% YOY. We take a look at
-                  what that means.
-                </p>
-              </div>
-            </div>
-          </section>
-        </div>
+      <button class="menu-icon-btn" id="menu-btn">
+        <img src="./assets/images/icon-menu.svg" aria-hidden="true" alt="Menu icon" />
+      </button>
 
-        <section class="trendings-section" aria-label="trending-stories">
-          <article class="trending-stories-card">
-            <img
-              src="./assets/images/image-retro-pcs.jpg"
-              alt="Reviving Retro PCs"
+    </header>
+
+    <main class="main">
+      <div class="top-section" aria-label="top-section">
+        <section
+          class="story-of-the-day"
+          aria-labelledby="story-of-the-day-title"
+          aria-describedby="story-of-the-day-description"
+        >
+          <picture>
+            <source
+              width="100%"
+              media="(min-width: 30em)"
+              srcset="./assets/images/image-web-3-desktop.jpg"
             />
-            <div role="contentinfo" class="content">
-              <h2 class="trending-stories-number">01</h2>
-              <h3 class="trending-stories-title">Reviving Retro PCs</h3>
-              <p class="trending-stories-description">
-                What happens when old PCs are given modern upgrades?
-              </p>
-            </div>
-          </article>
-          <article class="trending-stories-card">
             <img
-              src="./assets/images/image-top-laptops.jpg"
-              alt="Image of a keyboard"
+              width="100%"
+              src="./assets/images/image-web-3-mobile.jpg"
+              alt="Web3"
             />
-            <div role="contentinfo" class="content">
-              <h2 class="trending-stories-number">02</h2>
-              <h3 class="trending-stories-title">Top 10 Laptops of 2022</h3>
-              <p class="trending-stories-description">
-                Our best picks for various needs and budgets.
-              </p>
-            </div>
-          </article>
-          <article class="trending-stories-card">
-            <img
-              src="./assets/images/image-gaming-growth.jpg"
-              alt="Image of a gaming console overfloating a hand"
-            />
-            <div role="contentinfo" class="content">
-              <h2 class="trending-stories-number">03</h2>
-              <h3 class="trending-stories-title">The Growth of Gaming</h3>
-              <p class="trending-stories-description">
-                How the pandemic has sparked fresh opportunities.
-              </p>
-            </div>
-          </article>
+          </picture>
+          <h1 id="story-of-the-day-title">The Bright Future of Web 3.0?</h1>
+          <p id="story-of-the-day-description">
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
+          <button type="button" class="read-more-btn">Read more</button>
         </section>
-      </main>
+
+        <section class="news-section" aria-labelledby="news">
+          <h2 id="news">News</h2>
+          <div class="news-cards-wrapper">
+            <div class="news-card">
+              <h3 class="news-card-title">Hydrogen VS Electric Cars</h3>
+              <p class="news-card-description">
+                Will hydrogen-fueled cars ever catch up to EVs?
+              </p>
+            </div>
+            <div class="news-card">
+              <h3 class="news-card-title">The Downsides of AI Artistry</h3>
+              <p class="news-card-description">
+                What are the possible adverse effects of on-demand AI image
+                generation?
+              </p>
+            </div>
+            <div class="news-card">
+              <h3 class="news-card-title">Is VC Funding Drying Up?</h3>
+              <p class="news-card-description">
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="trendings-section" aria-label="trending-stories">
+        <article class="trending-stories-card">
+          <img
+            src="./assets/images/image-retro-pcs.jpg"
+            alt="Reviving Retro PCs"
+          />
+          <div role="contentinfo" class="content">
+            <h2 class="trending-stories-number">01</h2>
+            <h3 class="trending-stories-title">Reviving Retro PCs</h3>
+            <p class="trending-stories-description">
+              What happens when old PCs are given modern upgrades?
+            </p>
+          </div>
+        </article>
+        <article class="trending-stories-card">
+          <img
+            src="./assets/images/image-top-laptops.jpg"
+            alt="Image of a keyboard"
+          />
+          <div role="contentinfo" class="content">
+            <h2 class="trending-stories-number">02</h2>
+            <h3 class="trending-stories-title">Top 10 Laptops of 2022</h3>
+            <p class="trending-stories-description">
+              Our best picks for various needs and budgets.
+            </p>
+          </div>
+        </article>
+        <article class="trending-stories-card">
+          <img
+            src="./assets/images/image-gaming-growth.jpg"
+            alt="Image of a gaming console overfloating a hand"
+          />
+          <div role="contentinfo" class="content">
+            <h2 class="trending-stories-number">03</h2>
+            <h3 class="trending-stories-title">The Growth of Gaming</h3>
+            <p class="trending-stories-description">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
