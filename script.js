@@ -1,13 +1,17 @@
-const menuIconBtn = document.getElementById("menu-btn");
-const closeBtn = document.querySelector(".close-menu-btn");
-const mobileMenu = document.querySelector(".mobile-view-menu ");
+const menuIconOpenBtn = document.querySelector(".menu-icon-open-btn");
+const menuIconCloseBtn = document.querySelector(".menu-icon-close-btn");
+const mobileMenu = document.querySelector(".navbar");
 
-menuIconBtn.addEventListener("click", () => {
-  mobileMenu.classList.add("show");
-  closeBtn.classList.add("show");
+menuIconOpenBtn.addEventListener("click", () => {
+  const state = menuIconOpenBtn.getAttribute("aria-expanded") === "false";
+
+  menuIconOpenBtn.setAttribute("aria-expanded", state);
+  mobileMenu.classList.add("expanded");
+  menuIconOpenBtn.style.display="none"
 });
 
-closeBtn.addEventListener("click", () => {
-  mobileMenu.classList.remove("show");
-  closeBtn.classList.remove("show");
+menuIconCloseBtn.addEventListener("click", () => {
+  mobileMenu.classList.remove("expanded");
+  menuIconOpenBtn.style.display="flex"
+
 });

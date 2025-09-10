@@ -60,76 +60,63 @@ header {
 }
 
 /* Navigation */
-.menu-icon-btn {
-  width: 4em;
-  border: none;
-  background-color: transparent;
 
-  @media (min-width: 30em) {
-    display: none;
-  }
-}
-
-.main-navigation-menu {
-  display: flex;
-  justify-content: space-between;
-  column-gap: 1em;
-  list-style: none;
-
-  a {
-    text-decoration: none;
-    color: var(--Very-Dark-Blue);
-  }
-
+.navbar ul {
   a:hover,
-  a[aria-current="page"] {
+  a:active {
     color: var(--Primary-Red);
   }
 
-  @media (max-width: 30em) {
-    display: none;
-  }
-}
-
-.mobile-view-menu {
-  display: none;
-}
-
-.mobile-view-menu.show {
-  position: absolute;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  padding: 2em;
-  background-color: white;
-  align-items: flex-end;
-}
-
-.mobile-main-navigation-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  row-gap: 2em;
-  padding: 2em;
-  width: 60vw;
-  height: 100dvh;
-
-  list-style: none;
-
   a {
     text-decoration: none;
     color: var(--Very-Dark-Blue);
   }
+  list-style: none;
+  display: flex;
+  column-gap: 1em;
 }
 
-.close-menu-btn {
+.menu-icon-open-btn,
+.menu-icon-close-btn {
   display: none;
 }
 
-.close-menu-btn.show {
-  display: block;
-  width: 2em;
-  height: 2em;
+/* mobile view */
+@media (max-width: 30em) {
+  .menu-icon-open-btn,
+  .menu-icon-close-btn {
+    display: block;
+    width: 4em;
+    background-color: transparent;
+    border: none;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar.expanded {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 2em;
+    width: 70vw;
+    min-height: 100vh;
+    row-gap: 2em;
+    text-align: start;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  ul {
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+    row-gap: 2em;
+  }
 }
 
 /* Main Content */
@@ -145,10 +132,12 @@ header {
   }
 }
 
+/* Story of the day */
+
 .story-of-the-day {
   display: grid;
   text-align: start;
-  gap:1em;
+  gap: 1em;
 }
 
 .story-of-the-day-thumbnail {
@@ -163,35 +152,33 @@ header {
     grid-template-areas:
       "title content"
       "title button";
-      gap: 0.5em;
+    gap: 0.5em;
   }
 }
-  #story-of-the-day-title {
-    grid-area: title;
-    font-size: 2em;
-    font-weight: 800;
+#story-of-the-day-title {
+  grid-area: title;
+  font-size: 2em;
+  font-weight: 800;
+}
+
+#story-of-the-day-description {
+  grid-area: content;
+}
+
+.read-more-btn {
+  grid-area: button;
+  border: none;
+  color: black;
+  background-color: var(--Primary-Red);
+  text-transform: capitalize;
+  padding: 0.75em;
+  font-weight: 600;
+
+  &:hover {
+    color: var(--Off-White);
+    background-color: var(--Very-Dark-Blue);
   }
-
-  #story-of-the-day-description {
-    grid-area: content;
-  }
-
-  .read-more-btn {
-    grid-area: button;
-    border: none;
-    color: black;
-    background-color: var(--Primary-Red);
-    text-transform: capitalize;
-    padding: 0.75em;
-    font-weight: 600;
-
-    &:hover{
-      color: var(--Off-White);
-      background-color: var(--Very-Dark-Blue);
-    }
-  }
-
-
+}
 
 /* New Section */
 .new-section {
@@ -213,6 +200,10 @@ header {
   gap: 1.5em;
 }
 
+.new-card-title:hover {
+  color: var(--Primary-Orange);
+}
+
 .new-card-description {
   font-size: smaller;
 }
@@ -221,6 +212,7 @@ header {
   padding-block-end: 1.5em;
 }
 
+/* Trending  */
 .trendings-section {
   @media (min-width: 30em) {
     display: flex;

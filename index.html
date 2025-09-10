@@ -21,27 +21,14 @@
     <title>News | Homepage</title>
   </head>
   <body>
-    <!-- Menu layout in Mobile devices -->
-    <div class="mobile-view-menu">
-      <button class="close-menu-btn">
-        <img src="./assets/images/icon-menu-close.svg" alt="close menu icon" />
-      </button>
-      <nav aria-label="Primary">
-        <ul id="mobile-main-navigation" class="mobile-main-navigation-menu">
-          <li><a href="#" aria-current="page">Home</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Popular</a></li>
-          <li><a href="#">Trending</a></li>
-          <li><a href="#">Categories</a></li>
-        </ul>
-      </nav>
-    </div>
-
     <header>
       <img class="logo" src="./assets/images/logo.svg" alt="Logo" />
 
-      <nav aria-label="Primary">
-        <ul id="main-navigation" class="main-navigation-menu">
+      <nav class="navbar" aria-label="Primary">
+        <button class="menu-icon-close-btn">
+          <img src="./assets/images/icon-menu-close.svg" alt="Menu icon" />
+        </button>
+        <ul >
           <li><a href="#" aria-current="page">Home</a></li>
           <li><a href="#">News</a></li>
           <li><a href="#">Popular</a></li>
@@ -49,11 +36,9 @@
           <li><a href="#">Categories</a></li>
         </ul>
       </nav>
-
-      <button class="menu-icon-btn" id="menu-btn">
-        <img src="./assets/images/icon-menu.svg" aria-hidden="true" alt="Menu icon" />
+      <button class="menu-icon-open-btn" aria-expanded="false">
+        <img src="./assets/images/icon-menu.svg" alt="Menu icon" />
       </button>
-
     </header>
 
     <main class="main">
@@ -63,7 +48,7 @@
           aria-labelledby="story-of-the-day-title"
           aria-describedby="story-of-the-day-description"
         >
-          <picture  class="story-of-the-day-thumbnail">
+          <picture class="story-of-the-day-thumbnail">
             <source
               width="100%"
               media="(min-width: 30em)"
@@ -79,8 +64,8 @@
             <h1 id="story-of-the-day-title">The Bright Future of Web 3.0?</h1>
             <p id="story-of-the-day-description">
               We dive into the next evolution of the web that claims to put the
-              power of the platforms back into the hands of the people. But is it
-              really fulfilling its promise?
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
             </p>
             <button type="button" class="read-more-btn">Read more</button>
           </div>
