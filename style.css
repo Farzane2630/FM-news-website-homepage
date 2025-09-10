@@ -43,7 +43,7 @@ body {
   gap: 2em;
 
   @media (min-width: 30em) {
-    max-width: 45em;
+    max-width: 65em;
   }
 }
 
@@ -58,7 +58,6 @@ header {
   height: 3em;
   width: 4em;
 }
-
 
 /* Navigation */
 .menu-icon-btn {
@@ -133,22 +132,93 @@ header {
   height: 2em;
 }
 
-
 /* Main Content */
 .main {
   display: grid;
+  gap: 1em;
 }
 
 .top-section {
   @media (min-width: 30em) {
     display: flex;
+    column-gap: 1em;
   }
 }
 
 .story-of-the-day {
   display: grid;
-  gap: 1em;
   text-align: start;
+  gap:1em;
+}
+
+.story-of-the-day-thumbnail {
+  img {
+    height: 100%;
+  }
+}
+
+@media (min-width: 30em) {
+  .story-of-the-day-content {
+    display: grid;
+    grid-template-areas:
+      "title content"
+      "title button";
+      gap: 0.5em;
+  }
+}
+  #story-of-the-day-title {
+    grid-area: title;
+    font-size: 2em;
+    font-weight: 800;
+  }
+
+  #story-of-the-day-description {
+    grid-area: content;
+  }
+
+  .read-more-btn {
+    grid-area: button;
+    border: none;
+    color: black;
+    background-color: var(--Primary-Red);
+    text-transform: capitalize;
+    padding: 0.75em;
+    font-weight: 600;
+
+    &:hover{
+      color: var(--Off-White);
+      background-color: var(--Very-Dark-Blue);
+    }
+  }
+
+
+
+/* New Section */
+.new-section {
+  min-width: 15em;
+  display: grid;
+  background-color: var(--Very-Dark-Blue);
+  color: var(--Off-White);
+  padding: 1em;
+  gap: 1em;
+}
+
+#new-title {
+  color: var(--Primary-Orange);
+  font-size: xx-large;
+}
+
+.new-cards-wrapper {
+  display: grid;
+  gap: 1.5em;
+}
+
+.new-card-description {
+  font-size: smaller;
+}
+.new-card:not(:last-child) {
+  border-bottom: 1px solid var(--Off-White);
+  padding-block-end: 1.5em;
 }
 
 .trendings-section {
