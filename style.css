@@ -134,13 +134,14 @@ header {
 /* Main Content */
 .main {
   display: grid;
-  gap: 1em;
+  gap: 2em;
 }
 
 .top-section {
+  display: grid;
+  gap: 2em;
   @media (min-width: 35em) {
     display: flex;
-    column-gap: 1em;
   }
 }
 
@@ -157,6 +158,11 @@ header {
     height: 100%;
   }
 }
+  .story-of-the-day-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
 
 @media (min-width: 35em) {
   .story-of-the-day-content {
@@ -179,11 +185,12 @@ header {
 
 .read-more-btn {
   grid-area: button;
+  max-width: 10em;
   border: none;
   color: black;
   background-color: var(--Primary-Red);
-  text-transform: capitalize;
-  padding: 0.75em;
+  text-transform: uppercase;
+  padding: 1em;
   font-weight: 600;
 
   &:hover {
@@ -226,13 +233,36 @@ header {
 
 /* Trending  */
 .trendings-section {
-  @media (min-width: 35em) {
+  display: grid;
+  gap: 1em;
+  margin-block-end: 2em;
+  @media (min-width: 30em) {
     display: flex;
+
   }
 }
 
-.tretrending-card{
+.trending-card{
+@media (min-width: 30em) {
+    max-height: 18em;
 
+  }
+}
+
+.trending-content {
+  display: grid;
+  gap: 1em;
+
+}
+
+.trending-image{
+  height: 10em;
+  width: 100%;
+}
+
+.trending-rank{
+color: var(--Primary-Red);
+font-size: 3em;
 }
 
 
