@@ -65,6 +65,9 @@ Users should be able to:
 3. Landmarks should have a unique role or role/label/title (i.e. accessible name) combination 
 (read more: [https://dequeuniversity.com/rules/axe/4.10/landmark-no-duplicate-contentinfo?application=axeAPI])
 
+4. "aria-label" cannot be used on this element
+
+```<div class="top-section" aria-label="top-section">```
 
 ### Continued development
 
