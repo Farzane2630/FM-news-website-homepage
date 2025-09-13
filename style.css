@@ -51,7 +51,7 @@ body {
   align-content: center;
   gap: 2em;
 
-  @media (min-width: 35em) {
+  @media (min-width: 55em) {
     max-width: 65em;
   }
 }
